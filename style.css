@@ -1,0 +1,204 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.dock {
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+}
+.dock .dock-container {
+  max-width: 80%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 0px;
+  border-radius: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+.dock-container-bg {
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  min-width: 100% !important;
+  margin-right: -100%;
+  z-index: -1;
+  height: 70px;
+  border-radius: 16px;
+}
+.dock-container-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 6px);
+  margin: auto;
+  height: 64px;
+  background: #55555555;
+  border: 3px solid #55555586;
+  z-index: 2;
+  border-radius: 16px;
+}
+.dock .dock-container .li-bin {
+  padding: 0px 10px;
+}
+.dock .dock-container li .for-line {
+  position: relative;
+}
+.dock .dock-container li .for-line::before {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  left: -12px;
+  width: 3px;
+  height: 45px;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.553);
+  z-index: 99;
+}
+.dock .dock-container .doc-item.active::after {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffff00;
+  content: "";
+  bottom: 3px;
+}
+.dock .dock-container li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  transition: 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+.dock .dock-container li:hover {
+  margin: 0px 13px 0px 13px;
+}
+.dock .dock-container li .name {
+  position: absolute;
+  top: -70px;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  height: fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  visibility: hidden;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.dock .dock-container li .name::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.5);
+}
+.dock .dock-container li .ico {
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  margin-bottom: 20px;
+}
+.dock .dock-container li .ico-bin {
+  width: 94% !important;
+  height: 94% !important;
+  object-fit: cover;
+  transition: 0.2s;
+}
+.dock .dock-container li .ico-bin:hover {
+  margin-left: 10px;
+}
+.li-1:hover .name {
+  visibility: visible !important;
+}
+
+.li-2:hover .name {
+  visibility: visible !important;
+}
+
+.li-3:hover .name {
+  visibility: visible !important;
+}
+
+.li-4:hover .name {
+  visibility: visible !important;
+}
+
+.li-5:hover .name {
+  visibility: visible !important;
+}
+
+.li-6:hover .name {
+  visibility: visible !important;
+}
+
+.li-7:hover .name {
+  visibility: visible !important;
+}
+
+.li-8:hover .name {
+  visibility: visible !important;
+}
+
+.li-9:hover .name {
+  visibility: visible !important;
+}
+
+.li-10:hover .name {
+  visibility: visible !important;
+}
+
+.li-11:hover .name {
+  visibility: visible !important;
+}
+
+.li-12:hover .name {
+  visibility: visible !important;
+}
+
+.li-13:hover .name {
+  visibility: visible !important;
+}
+
+.li-14:hover .name {
+  visibility: visible !important;
+}
+
+.li-15:hover .name {
+  visibility: visible !important;
+}
+
+@media (max-width: 500px) {
+  .dock .dock-container {
+    min-width: 90%;
+  }
+}
